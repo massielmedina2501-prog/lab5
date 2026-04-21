@@ -8,8 +8,16 @@ public class GranTurismo extends CocheDeCarreras {
 
     @Override
     public void competir() {
-        System.out.println("El piloto compite en Gran Turismo gestionando un lastre extra de "
-                + pesoExtraLastre + " kg, lo que afecta la aceleración y el manejo.");
+        String tipoLastre;
+
+        if (pesoExtraLastre > 50) {
+            tipoLastre = "pesado";
+        } else {
+            tipoLastre = "liviano";
+        }
+
+        System.out.println("El piloto compite en Gran Turismo con un lastre "
+                + tipoLastre + " de " + pesoExtraLastre + " kg.");
     }
 
     public int getPesoExtraLastre() {
